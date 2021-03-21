@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.Cmap">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="Scatter"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".News"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity android:name=".NewMain"
+            android:theme="@style/FullScreenTheme">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".Loading"
+            android:theme="@style/FullScreenTheme" />
+        <activity android:name=".MyQr"
+            android:theme="@style/FullScreenTheme"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@style/FullScreenTheme"/>
+        <activity android:name=".Scaner"
+            android:theme="@style/FullScreenTheme"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/FullScreenTheme">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".CaptureAct"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <receiver android:name=".BroadcastD"></receiver>
+
+
+    </application>
+
+</manifest>
